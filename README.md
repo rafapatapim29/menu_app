@@ -1,7 +1,7 @@
 # Menú Digital con Flask
 
 Este proyecto es un **menú digital simple** creado con **Python + Flask**, pensado para restaurantes o negocios que quieran mostrar sus platillos en línea.  
-Se puede desplegar fácilmente en [PythonAnywhere](https://www.pythonanywhere.com).
+Se puede desplegar fácilmente en [PythonAnywhere](https://rafahost.pythonanywhere.com).
 
 ## Características
 - Menú dinámico con nombre y precio de cada platillo.
@@ -9,7 +9,7 @@ Se puede desplegar fácilmente en [PythonAnywhere](https://www.pythonanywhere.co
 - Código QR para acceder al menú desde cualquier dispositivo.
 - Compatible con despliegue en PythonAnywhere.
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 menu_app/ 
 │── app.py 
 │── static/ 
@@ -42,14 +42,14 @@ menu_app/
 El proyecto incluye un script para generar un QR que apunta a tu menú en PythonAnywhere:
 
     import qrcode
-from PIL import Image
-
-qr = qrcode.QRCode(version=1, box_size=10, border=4)
-qr.add_data("https://tuusuario.pythonanywhere.com")
-qr.make(fit=True)
-
-img = qr.make_image(fill_color="blue", back_color="white")
-img.save("static/menu_qr_custom.png")
+        from PIL import Image
+        
+        qr = qrcode.QRCode(version=1, box_size=10, border=4)
+        qr.add_data("https://rafahost.pythonanywhere.com")
+        qr.make(fit=True)
+        
+        img = qr.make_image(fill_color="blue", back_color="white")
+        img.save("static/menu_qr_custom.png")
 
 #### Personalización
 - Edita index.html para cambiar estilos y diseño.
